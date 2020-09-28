@@ -19,28 +19,32 @@
 
   <% if user_signed_in? %>
   <li class="">
-    <%= link_to "Home", new_user_registration_path%>
+    <%= link_to "Home", user_path %>
   </li>
 
   <li class="">
-    <%= link_to "Users", new_user_registration_path%>
+    <%= link_to "Users", users_path%>
   </li>
 
+<!--変更必要-->
   <li class="">
     <%= link_to "Books",new_user_registration_path %>
   </li>
 
+<!--変更必要-->
   <li class="">
     <%= link_to "logout", new_user_registration_path%>
   </li>
 
   <% else %>
+  <!--変更必要-->
   <li class="">
-    <%= link_to "Home",new_user_registration_path %>
+    <%= link_to "Home", root_path %>
   </li>
 
+ <!--変更必要-->
   <li class="">
-    <%= link_to "About", new_user_registration_path %>
+    <%= link_to "About", home_about_path %>
   </li>
 
   <li class="">
@@ -48,7 +52,7 @@
   </li>
 
   <li class="">
-    <%= link_to "login", new_user_registration_path %>
+    <%= link_to "login", new_user_session_path %>
   </li>
 
 <!--until here -->
