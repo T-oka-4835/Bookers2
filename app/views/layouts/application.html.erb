@@ -9,6 +9,54 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<!--Need to change the path -->
+
+<header>
+
+  <p>
+    <strong>Bookers</strong>
+  </p>
+
+  <% if user_signed_in? %>
+  <li class="">
+    <%= link_to "Home", new_user_registration_path%>
+  </li>
+
+  <li class="">
+    <%= link_to "Users", new_user_registration_path%>
+  </li>
+
+  <li class="">
+    <%= link_to "Books",new_user_registration_path %>
+  </li>
+
+  <li class="">
+    <%= link_to "logout", new_user_registration_path%>
+  </li>
+
+  <% else %>
+  <li class="">
+    <%= link_to "Home",new_user_registration_path %>
+  </li>
+
+  <li class="">
+    <%= link_to "About", new_user_registration_path %>
+  </li>
+
+  <li class="">
+    <%= link_to "sign_up",new_user_registration_path %>
+  </li>
+
+  <li class="">
+    <%= link_to "login", new_user_registration_path %>
+  </li>
+
+<!--until here -->
+ <% end %>
+
+</header>
+
+
   <body>
     <%= yield %>
   </body>
