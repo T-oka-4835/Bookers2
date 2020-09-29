@@ -13,53 +13,47 @@
 
 <header>
 
-  <p>
+  <p class="header-title">
     <strong>Bookers</strong>
   </p>
 
   <% if user_signed_in? %>
-  <li class="">
-    <%= link_to "Home", user_path %>
+  <li class="header-nav">
+    <%= link_to "Home", users_path %>
   </li>
 
-  <li class="">
+  <li class="header-nav">
     <%= link_to "Users", users_path%>
   </li>
 
 <!--変更必要-->
-  <li class="">
-    <%= link_to "Books",new_user_registration_path %>
+  <li class="header-nav">
+    <%= link_to "Books", books_path %>
   </li>
 
-<!--変更必要-->
-  <li class="">
-    <%= link_to "logout", new_user_registration_path%>
+  <li class="header-nav">
+    <%= link_to "logout", root_path %>
   </li>
 
   <% else %>
-  <!--変更必要-->
-  <li class="">
+  <li class="header-nav">
     <%= link_to "Home", root_path %>
   </li>
 
- <!--変更必要-->
-  <li class="">
+  <li class="header-nav">
     <%= link_to "About", home_about_path %>
   </li>
 
-  <li class="">
+  <li class="header-nav">
     <%= link_to "sign_up",new_user_registration_path %>
   </li>
 
-  <li class="">
+  <li class="header-nav">
     <%= link_to "login", new_user_session_path %>
   </li>
-
-<!--until here -->
  <% end %>
 
 </header>
-
 
   <body>
     <%= yield %>
