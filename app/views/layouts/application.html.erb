@@ -32,7 +32,7 @@
   </li>
 
   <li class="header-nav">
-    <%= link_to "logout", root_path %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
   </li>
 
   <% else %>
