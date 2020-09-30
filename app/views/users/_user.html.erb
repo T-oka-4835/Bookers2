@@ -1,22 +1,23 @@
 <h2>User info</h2>
 
+<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+
 <table class="table">
   <tbody>
     <tr></tr>
     <tr>
       <th>name</th>
-      <th></th>
+      <th><%= @user %></th>
     </tr>
 
     <tr>
       <th>introduction</th>
-      <th></th>
+
+      <div>edit picture</div>
+
     </tr>
   </tbody>
 </table>
-
-<div>edit picture</div>
-<!-- link_to "picture", edit_user_path(@user.id) %>-->
 
 <h4>New book</h4>
 <%= form_with model: @user, local: true do |f| %>
