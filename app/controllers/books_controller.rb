@@ -1,10 +1,14 @@
 class BooksController < ApplicationController
   def index
     @books = Book.all
+    @book = Book.new
+    @user = current_user
   end
 
   def show
     @book = Book.find(params[:id])
+    # 修正必要
+    @user = current_user
   end
 
   def new
@@ -15,11 +19,10 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     if @book.save
-    redirect_to @book
+      redirect_to @book
     else
-    remder :new 
-    end 
-  
+      render 'index'
+    end
   end
 
   def edit
@@ -34,7 +37,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.permit(:title, :body, :profile_image)
+    params.require(:book).permit(:title, :body)
   end
 
 end
