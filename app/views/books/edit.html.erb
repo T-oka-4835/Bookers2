@@ -1,3 +1,8 @@
+<div class="body">
+  <div class="container">
+    <div class="row">
+
+  <div class="col-md-6 col-md-offset-3">
 <h4>Editing Book</h4>
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
 
@@ -6,10 +11,17 @@
 
 <div>Opinion</div>
 <%= f.text_area :body %> <br>
+
+<div class="btn btn-primary col-xs-12 ">
 <%= f.submit 'Update Book'%>
+</div>
 
 <%= link_to "show", book_path(@book.id) %>
 <%= link_to "back", books_path %>
 
-
 <% end %>
+
+     </div>
+   </div>
+  </div>
+</div>

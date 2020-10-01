@@ -5,16 +5,17 @@
     <%= render 'users/user', users: @users %>
   </div>
 
- <div class="col-xs-9">
+ <div class="col--9">
 <h4>Book detail</h4>
 
   <table>
     <tbody>
       <tr>
+    <td><%=  %></td>
     <td><%= @book.title %></td>
     <td><%= @book.body %></td>
-    <td><%= link_to "Edit", edit_book_path(@book.id) %></td>
-    <td><%= link_to "Destroy" "#" %></td>
+    <!--<td><= link_to "Edit", edit_book_path(@book.id) %></td>-->
+    <!--<td><= link_to "Destroy" "#" %></td>-->
       </tr>
     </tbody>
   </table>
