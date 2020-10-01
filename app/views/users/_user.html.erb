@@ -1,5 +1,9 @@
 <h2>User info</h2>
 
+<p>
+  <%= notice %>
+</p>
+
 <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
 
 <table class="table">

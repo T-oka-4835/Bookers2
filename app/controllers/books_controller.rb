@@ -34,10 +34,10 @@ class BooksController < ApplicationController
     book.update(book_params)
     redirect_to book_path(book.id), notice: 'You have updated book successfully.'
   end
-  
+
   def destroy
-    
-  end 
+
+  end
 
   private
   def book_params
