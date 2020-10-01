@@ -1,5 +1,3 @@
-
-
 class UsersController < ApplicationController
 
   def show
@@ -11,6 +9,8 @@ class UsersController < ApplicationController
   def index
     @book = Book.new
     @user = current_user
+    # 他のユーザー
+    @users = User.all
   end
 
   def edit
