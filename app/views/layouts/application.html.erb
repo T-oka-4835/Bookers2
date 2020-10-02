@@ -13,45 +13,52 @@
 
 <header>
 
+  <div class="container">
   <p class="header-title">
     <strong>Bookers</strong>
   </p>
 
+  <ul>
+    <div class="header-nav-div">
+
   <% if user_signed_in? %>
-  <li class="header-nav">
-    <%= link_to "Home", user_path(current_user) %>
+  <li class="header-nav glyphicon glyphicon-home">
+    <%= link_to "Home", user_path(current_user) ,class:"nav-list" %>
   </li>
 
-  <li class="header-nav">
-    <%= link_to "Users", users_path %>
+  <li class="header-nav glyphicon glyphicon-user users">
+    <%= link_to "Users", users_path ,class:"nav-list" %>
   </li>
 
 <!--変更必要-->
-  <li class="header-nav">
-    <%= link_to "Books", books_path %>
+  <li class="header-nav glyphicon glyphicon-book books">
+    <%= link_to "Books", books_path ,class:"nav-list" %>
   </li>
 
-  <li class="header-nav">
-    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  <li class="header-nav glyphicon glyphicon-log-out logout">
+    <%= link_to "logout", destroy_user_session_path, method: :delete ,class:"nav-list" %>
   </li>
 
   <% else %>
-  <li class="header-nav">
-    <%= link_to "Home", root_path %>
+  <li class="header-nav glyphicon glyphicon-home">
+    <%= link_to "Home", root_path ,class:"nav-list" %>
   </li>
 
-  <li class="header-nav">
-    <%= link_to "About", home_about_path %>
+  <li class="header-nav glyphicon glyphicon-link about">
+    <%= link_to "About", home_about_path ,class:"nav-list" %>
   </li>
 
-  <li class="header-nav">
-    <%= link_to "sign up",new_user_registration_path %>
+  <li class="header-nav glyphicon glyphicon-edit sign_up">
+    <%= link_to "sign up",new_user_registration_path ,class:"nav-list" %>
   </li>
 
-  <li class="header-nav">
-    <%= link_to "login", new_user_session_path %>
+  <li class="header-nav glyphicon glyphicon-log-in sign_in">
+    <%= link_to "login", new_user_session_path ,class:"nav-list" %>
   </li>
  <% end %>
+
+ </ul>
+ </div>
 
 </header>
 
