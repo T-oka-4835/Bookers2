@@ -75,16 +75,16 @@ header {
 }
 
 .btn-primary {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.book_title {
+.edit_book_title {
   font-size: 36px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.edit_title {
+.book_edit_title {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 14px;
@@ -94,5 +94,14 @@ header {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 14px;
+}
+
+.sign_up_btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login_btn {
+  margin-bottom: 10px;
 }
 

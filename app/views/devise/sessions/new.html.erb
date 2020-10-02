@@ -1,3 +1,4 @@
+<div class="container">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -18,9 +19,22 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  <div class="actions btn btn-primary login_btn">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-9">
+        <p>
+          CopyRight Infratop.inc
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
