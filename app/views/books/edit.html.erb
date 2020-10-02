@@ -3,14 +3,15 @@
     <div class="row">
 
   <div class="col-md-6 col-md-offset-3">
-<h4>Editing Book</h4>
+
+<h1 class="book_title">Editing Book</h1>
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
 
-<div>Title</div>
-<%= f.text_field :title %>
+<div class="edit_title">Title</div>
+<%= f.text_field :title, class: "col-xs-12" %>
 
-<div>Opinion</div>
-<%= f.text_area :body %> <br>
+<div class="edit_opinion">Opinion</div>
+<%= f.text_area :body, class: "col-xs-12" %> <br>
 
 <div class="btn btn-primary col-xs-12 ">
 <%= f.submit 'Update Book'%>
@@ -20,7 +21,6 @@
 <%= link_to "Back", books_path %>
 
 <% end %>
-
      </div>
    </div>
   </div>

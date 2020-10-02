@@ -7,6 +7,7 @@
 <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
 
 <table class="table">
+
   <tbody>
     <tr></tr>
     <tr>
@@ -21,26 +22,26 @@
   </tbody>
 </table>
 
-<div class="col-xs-12">
-  <%= link_to edit_user_path(user.id), class: 'btn btn-default' do %>
+  <%= link_to edit_user_path(user.id), class: 'btn btn-default col-xs-12' do %>
   <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
   <% end %>
-</div>
 
-<h4>New book</h4>
+<h4 class="new-book">New book</h4>
 <%= form_with model:book, local:true do |f| %>
 
 <div>
-  <div>Title</div>
-  <%= f.text_field :title %>
+  <div class="book_title">Title</div>
+  <%= f.text_field :title, class: "col-xs-12" %>
 </div>
 
 <div>
-  <div>Opinion</div>
-  <%= f.text_area :body %>
+  <div class="book_opinion">Opinion</div>
+  <%= f.text_area :body, class: "col-xs-12" %>
 </div>
 
+<div class="btn btn-primary col-xs-12">
 <%= f.submit 'Create Book' %>
+</div>
 
 <% end %>
 
