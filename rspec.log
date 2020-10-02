@@ -102,14 +102,14 @@ bootstrapのテスト
 ユーザー権限のテスト
   ログインしていない場合
     投稿関連のURLにアクセス
-[31m      一覧画面に遷移できない (FAILED - 17)[0m
-[31m      編集画面に遷移できない (FAILED - 18)[0m
-[31m      詳細画面に遷移できない (FAILED - 19)[0m
+[32m      一覧画面に遷移できない[0m
+[32m      編集画面に遷移できない[0m
+[32m      詳細画面に遷移できない[0m
   ログインしていない場合にユーザー関連のURLにアクセス
     ユーザー関連のURLにアクセス
-[31m      一覧画面に遷移できない (FAILED - 20)[0m
-[31m      編集画面に遷移できない (FAILED - 21)[0m
-[31m      詳細画面に遷移でない (FAILED - 22)[0m
+[32m      一覧画面に遷移できない[0m
+[32m      編集画面に遷移できない[0m
+[32m      詳細画面に遷移でない[0m
 
 トップページのテスト
   ボディ部分のテスト
@@ -145,14 +145,14 @@ bootstrapのテスト
     自分の編集画面への遷移
 [32m      遷移できる[0m
     他人の編集画面への遷移
-[31m      遷移できない (FAILED - 23)[0m
+[31m      遷移できない (FAILED - 17)[0m
     表示の確認
 [32m      User infoと表示される[0m
 [32m      名前編集フォームに自分の名前が表示される[0m
 [32m      画像編集フォームが表示される[0m
 [32m      自己紹介編集フォームに自分の自己紹介が表示される[0m
-[31m      編集に成功する (FAILED - 24)[0m
-[31m      編集に失敗する (FAILED - 25)[0m
+[32m      編集に成功する[0m
+[31m      編集に失敗する (FAILED - 18)[0m
   一覧画面のテスト
     表示の確認
 [32m      Usersと表示される[0m
@@ -163,8 +163,8 @@ bootstrapのテスト
     表示の確認
 [32m      Booksと表示される[0m
 [32m      投稿一覧のユーザーの画像のリンク先が正しい[0m
-[31m      投稿一覧のtitleのリンク先が正しい (FAILED - 26)[0m
-[31m      投稿一覧にopinionが表示される (FAILED - 27)[0m
+[31m      投稿一覧のtitleのリンク先が正しい (FAILED - 19)[0m
+[31m      投稿一覧にopinionが表示される (FAILED - 20)[0m
 
 Failures:
 
@@ -176,8 +176,8 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -223,7 +223,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   2) 投稿のテスト サイドバーのテスト 表示の確認 投稿に失敗する
      [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -233,9 +233,9 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/index.html.erb:5:in `_app_views_books_index_html_erb___660676175623634449_54029900'[0m
-     [36m# ./app/controllers/books_controller.rb:24:in `create'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/index.html.erb:5:in `_app_views_books_index_html_erb__2128972554982985299_84315840'[0m
+     [36m# ./app/controllers/books_controller.rb:26:in `create'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -279,7 +279,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   3) 投稿のテスト 編集のテスト 他人の投稿の編集画面への遷移 遷移できない
      [31mFailure/Error: expect(current_path).to eq('/books')[0m
@@ -301,8 +301,8 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -348,7 +348,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   5) 投稿のテスト 編集のテスト フォームの確認 編集に失敗する
      [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -358,8 +358,8 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -405,7 +405,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   6) 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人の画像のリンク先が正しい
      [31mFailure/Error: expect(page).to have_link '', href: user_path(book2.user)[0m
@@ -423,8 +423,8 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -460,7 +460,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   8) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 ユーザー画像・名前のリンク先が正しい
      [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -470,8 +470,8 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -507,7 +507,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   9) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 投稿のtitleが表示される
      [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -517,8 +517,8 @@ Failures:
      [31m[0m
      [31m[0m
      [31m[0m
-     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+     [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+     [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -554,7 +554,7 @@ Failures:
      [36m# --- Caused by: ---[0m
      [36m# NoMethodError:[0m
      [36m#   undefined method `name' for nil:NilClass[0m
-     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+     [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   10) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 投稿のopinionが表示される
       [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -564,8 +564,8 @@ Failures:
       [31m[0m
       [31m[0m
       [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -601,7 +601,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   11) 投稿のテスト 詳細画面のテスト 自分の投稿詳細画面の表示を確認 投稿の編集リンクが表示される
       [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -611,8 +611,8 @@ Failures:
       [31m[0m
       [31m[0m
       [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -648,7 +648,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   12) 投稿のテスト 詳細画面のテスト 自分の投稿詳細画面の表示を確認 投稿の削除リンクが表示される
       [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -658,8 +658,8 @@ Failures:
       [31m[0m
       [31m[0m
       [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -695,7 +695,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   13) 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の編集リンクが表示されない
       [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -705,8 +705,8 @@ Failures:
       [31m[0m
       [31m[0m
       [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -742,7 +742,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   14) 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の削除リンクが表示されない
       [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -752,8 +752,8 @@ Failures:
       [31m[0m
       [31m[0m
       [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -789,7 +789,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   15) bootstrapのテスト グリッドシステムのテスト 投稿関連画面 詳細画面
       [31mFailure/Error: <th><%= user.name %></th>[0m
@@ -799,8 +799,8 @@ Failures:
       [31m[0m
       [31m[0m
       [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
+      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
+      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb__125886194197167009_83677280'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
@@ -836,7 +836,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
+      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__2972322763005504357_80325560'[0m
 
   16) ヘッダーのテスト ログインしている場合 ヘッダーのリンクを確認 logoutする
       [31mFailure/Error: expect(page).to have_content 'Signed out successfully.'[0m
@@ -846,184 +846,7 @@ Failures:
       [31m[0m
       [36m# ./spec/system/header_spec.rb:119:in `block (4 levels) in <main>'[0m
 
-  17) ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 一覧画面に遷移できない
-      [31mFailure/Error: <th><%= user.name %></th>[0m
-      [31m[0m
-      [31mActionView::Template::Error:[0m
-      [31m  undefined method `name' for nil:NilClass[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/index.html.erb:5:in `_app_views_books_index_html_erb___660676175623634449_54029900'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:38:in `call_app'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:26:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:26:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/engine.rb:524:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:74:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:58:in `each'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:58:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/builder.rb:244:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/mock_session.rb:29:in `request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:266:in `process_request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:129:in `custom_request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:58:in `get'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:70:in `process'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:45:in `process_and_follow_redirects'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:23:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/driver.rb:45:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/session.rb:278:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
-      [36m# ./spec/system/main_spec.rb:9:in `block (4 levels) in <main>'[0m
-      [36m# ------------------[0m
-      [36m# --- Caused by: ---[0m
-      [36m# NoMethodError:[0m
-      [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-
-  18) ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 編集画面に遷移できない
-      [31mFailure/Error: expect(current_path).to eq('/users/sign_in')[0m
-      [31m[0m
-      [31m  expected: "/users/sign_in"[0m
-      [31m       got: "/books/1/edit"[0m
-      [31m[0m
-      [31m  (compared using ==)[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./spec/system/main_spec.rb:14:in `block (4 levels) in <main>'[0m
-
-  19) ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 詳細画面に遷移できない
-      [31mFailure/Error: <th><%= user.name %></th>[0m
-      [31m[0m
-      [31mActionView::Template::Error:[0m
-      [31m  undefined method `name' for nil:NilClass[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/books/show.html.erb:5:in `_app_views_books_show_html_erb___209305997535113179_53060880'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:38:in `call_app'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:26:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:26:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/engine.rb:524:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:74:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:58:in `each'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:58:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/builder.rb:244:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/mock_session.rb:29:in `request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:266:in `process_request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:129:in `custom_request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:58:in `get'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:70:in `process'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:45:in `process_and_follow_redirects'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:23:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/driver.rb:45:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/session.rb:278:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
-      [36m# ./spec/system/main_spec.rb:17:in `block (4 levels) in <main>'[0m
-      [36m# ------------------[0m
-      [36m# --- Caused by: ---[0m
-      [36m# NoMethodError:[0m
-      [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-
-  20) ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 一覧画面に遷移できない
-      [31mFailure/Error: <th><%= user.name %></th>[0m
-      [31m[0m
-      [31mActionView::Template::Error:[0m
-      [31m  undefined method `name' for nil:NilClass[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-      [36m# ./app/views/users/index.html.erb:5:in `_app_views_users_index_html_erb___236433361898475057_72282420'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:38:in `call_app'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:26:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/rack/logger.rb:26:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.4/lib/rails/engine.rb:524:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:74:in `block in call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:58:in `each'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/urlmap.rb:58:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-2.2.3/lib/rack/builder.rb:244:in `call'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/mock_session.rb:29:in `request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:266:in `process_request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:129:in `custom_request'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/rack-test-1.1.0/lib/rack/test.rb:58:in `get'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:70:in `process'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:45:in `process_and_follow_redirects'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/browser.rb:23:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/rack_test/driver.rb:45:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/session.rb:278:in `visit'[0m
-      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/capybara-3.33.0/lib/capybara/dsl.rb:58:in `block (2 levels) in <module:DSL>'[0m
-      [36m# ./spec/system/main_spec.rb:25:in `block (4 levels) in <main>'[0m
-      [36m# ------------------[0m
-      [36m# --- Caused by: ---[0m
-      [36m# NoMethodError:[0m
-      [36m#   undefined method `name' for nil:NilClass[0m
-      [36m#   ./app/views/users/_user.html.erb:14:in `_app_views_users__user_html_erb__3503125861128318797_53782860'[0m
-
-  21) ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 編集画面に遷移できない
-      [31mFailure/Error: expect(current_path).to eq('/users/sign_in')[0m
-      [31m[0m
-      [31m  expected: "/users/sign_in"[0m
-      [31m       got: "/users/1/edit"[0m
-      [31m[0m
-      [31m  (compared using ==)[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./spec/system/main_spec.rb:30:in `block (4 levels) in <main>'[0m
-
-  22) ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 詳細画面に遷移でない
-      [31mFailure/Error: expect(current_path).to eq('/users/sign_in')[0m
-      [31m[0m
-      [31m  expected: "/users/sign_in"[0m
-      [31m       got: "/users/1"[0m
-      [31m[0m
-      [31m  (compared using ==)[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./spec/system/main_spec.rb:34:in `block (4 levels) in <main>'[0m
-
-  23) ユーザーのテスト 編集のテスト 他人の編集画面への遷移 遷移できない
+  17) ユーザーのテスト 編集のテスト 他人の編集画面への遷移 遷移できない
       [31mFailure/Error: expect(current_path).to eq('/users/' + user.id.to_s)[0m
       [31m[0m
       [31m  expected: "/users/2"[0m
@@ -1035,40 +858,32 @@ Failures:
       [31m[0m
       [36m# ./spec/system/users_spec.rb:96:in `block (4 levels) in <main>'[0m
 
-  24) ユーザーのテスト 編集のテスト 表示の確認 編集に成功する
-      [31mFailure/Error: expect(page).to have_content 'successfully'[0m
-      [31m  expected to find text "successfully" in "Bookers\nHome Users Books logout\nUser info\nname 943v1glnrf introduction 7ct1ozizx6fff5kvc8jv\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion hello"[0m
-      [31m[0m
-      [31m[0m
-      [31m[0m
-      [36m# ./spec/system/users_spec.rb:118:in `block (4 levels) in <main>'[0m
-
-  25) ユーザーのテスト 編集のテスト 表示の確認 編集に失敗する
+  18) ユーザーのテスト 編集のテスト 表示の確認 編集に失敗する
       [31mFailure/Error: expect(page).to have_content 'error'[0m
-      [31m  expected to find text "error" in "Bookers\nHome Users Books logout\nUser info\nname msqbj51a57 introduction p1pno8e4ha61d1ginhyv\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion hello"[0m
+      [31m  expected to find text "error" in "Bookers\nHome Users Books logout\nUser info\nYou have updated user successfully.\nname m70ys8t2uw introduction x8q1ib1lj1mda5t672gx\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion hello hello"[0m
       [31m[0m
       [31m[0m
       [31m[0m
       [36m# ./spec/system/users_spec.rb:124:in `block (4 levels) in <main>'[0m
 
-  26) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のtitleのリンク先が正しい
+  19) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のtitleのリンク先が正しい
       [31mFailure/Error: expect(page).to have_link book.title, href: book_path(book)[0m
-      [31m  expected to find link "p4fuf" with href "/books/1" but there were no matches[0m
+      [31m  expected to find link "0ye2i" with href "/books/1" but there were no matches[0m
       [31m[0m
       [31m[0m
       [31m[0m
       [36m# ./spec/system/users_spec.rb:164:in `block (4 levels) in <main>'[0m
 
-  27) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧にopinionが表示される
+  20) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧にopinionが表示される
       [31mFailure/Error: expect(page).to have_content(book.body)[0m
-      [31m  expected to find text "3sbfm3s07kjsuwtvx51t" in "Bookers\nHome Users Books logout\nUser info\nname httnrrx1v7 introduction sxj3g4r1xgf790ls7o0m\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion hello"[0m
+      [31m  expected to find text "op2mjob9c7v1j3z5oslv" in "Bookers\nHome Users Books logout\nUser info\nname ciqrkx64as introduction xx0boimuq5igqmgyw9d5\nNew book\nTitle\nOpinion\nBooks\nTitle Opinion hello hello"[0m
       [31m[0m
       [31m[0m
       [31m[0m
       [36m# ./spec/system/users_spec.rb:167:in `block (4 levels) in <main>'[0m
 
-Finished in 3.31 seconds (files took 1.38 seconds to load)
-[31m95 examples, 27 failures[0m
+Finished in 8.27 seconds (files took 1.75 seconds to load)
+[31m95 examples, 20 failures[0m
 
 Failed examples:
 
@@ -1088,14 +903,7 @@ Failed examples:
 [31mrspec ./spec/system/books_spec.rb:149[0m [36m# 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の削除リンクが表示されない[0m
 [31mrspec ./spec/system/bootstrap_spec.rb:31[0m [36m# bootstrapのテスト グリッドシステムのテスト 投稿関連画面 詳細画面[0m
 [31mrspec ./spec/system/header_spec.rb:115[0m [36m# ヘッダーのテスト ログインしている場合 ヘッダーのリンクを確認 logoutする[0m
-[31mrspec ./spec/system/main_spec.rb:8[0m [36m# ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 一覧画面に遷移できない[0m
-[31mrspec ./spec/system/main_spec.rb:12[0m [36m# ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 編集画面に遷移できない[0m
-[31mrspec ./spec/system/main_spec.rb:16[0m [36m# ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 詳細画面に遷移できない[0m
-[31mrspec ./spec/system/main_spec.rb:24[0m [36m# ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 一覧画面に遷移できない[0m
-[31mrspec ./spec/system/main_spec.rb:28[0m [36m# ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 編集画面に遷移できない[0m
-[31mrspec ./spec/system/main_spec.rb:32[0m [36m# ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 詳細画面に遷移でない[0m
 [31mrspec ./spec/system/users_spec.rb:94[0m [36m# ユーザーのテスト 編集のテスト 他人の編集画面への遷移 遷移できない[0m
-[31mrspec ./spec/system/users_spec.rb:116[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 編集に成功する[0m
 [31mrspec ./spec/system/users_spec.rb:121[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 編集に失敗する[0m
 [31mrspec ./spec/system/users_spec.rb:163[0m [36m# ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のtitleのリンク先が正しい[0m
 [31mrspec ./spec/system/users_spec.rb:166[0m [36m# ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧にopinionが表示される[0m
