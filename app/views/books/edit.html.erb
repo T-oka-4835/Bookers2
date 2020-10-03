@@ -5,7 +5,11 @@
   <div class="col-md-6 col-md-offset-3">
 
 <h1 class="book_title">Editing Book</h1>
-<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+<%= form_with model:@book, local:true do |f| %>
+
+<% if f.object.errors.any? %>
+<%= render 'layouts/error', model:f.object %>
+<% end %>
 
 <div class="edit_title">Title</div>
 <%= f.text_field :title, class: "col-xs-12" %>

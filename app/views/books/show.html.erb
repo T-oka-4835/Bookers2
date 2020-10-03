@@ -15,15 +15,15 @@
     <td><%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", class: "no-image" %><br>
     <%= link_to @user.name,user_path(current_user) %>
     </td>
-    <td><%= @book.title %></td>
+    <td><%= link_to @book.title, book_path(@book)  %></td>
     <td><%= @book.body %></td>
 
-    <!--修正必要-->
-    <% if @user.id == current_user.id %>
+    <% if @book.user == @user %>
     <td><%= link_to "Edit", edit_book_path(@book.id)%></td>
     <td><%= link_to "Destroy", book_path(@book), method: :delete, "date-confirm" => "本当に消しますか？" %></td>
     </tr>
     <% end %>
+
     </tbody>
     </table>
 
