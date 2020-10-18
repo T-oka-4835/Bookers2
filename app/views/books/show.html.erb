@@ -24,7 +24,6 @@
     </tr>
     <% end %>
 
-
     <!--いいね機能-->
      <% if @book.favorited_by?(current_user) %>
         <td>
@@ -41,6 +40,31 @@
           <% end %>
         </td>
         <% end %>
+      <!--いいね機能-->
+
+      <!--コメント機能-->
+        <!--<i class="fa fa-comment"></i>-->
+        <!--<a href="#comments"><= @book.post_comments.count %></a>-->
+
+      <div class="comment-list bt style-2" id="comments">
+        <div class="float-wrapper">
+        <td class="comment-count">コメント数：<%= @book.post_comments.count %></td>
+      </div>
+
+
+      <%= form_with(model:[@book, @post_comment], local: true) do |f| %>
+      <div class="row">
+        <div class="col-sm-12">
+          <%= f.text_area :comment, rows:'5', class: "form-control"%>
+        </div>
+      </div>
+      <%= f.submit "送信", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+      <% end %>
+
+
+　　　<!--コメント機能-->
+
+
     </tbody>
     </table>
 
