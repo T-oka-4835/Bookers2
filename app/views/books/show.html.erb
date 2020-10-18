@@ -55,22 +55,28 @@
     </table>
 
         <% @book.post_comments.each do |post_comment| %>
-              <div class="avatar">
+        <table>
+          <tbody>
+            <tr>
+              <td class="avatar">
                  <%= attachment_image_tag post_comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-              </div>
-               <div class="comment-text">
-                 <div class="comment-author clearfix">
-                  <a href="#" class="link-author"><%= post_comment.user.name %></a>
+                  <div class="comment-author clearfix">
+                  <div><%= post_comment.user.name %></div>
                  </div>
-                <div class="comment-entry"><%= post_comment.comment %>
-               </div>
+              </td>
+               <div class="comment-text">
+
+                 <td class="comment-entry"><%= post_comment.comment %></td>
             <% if post_comment.user == current_user %>
-            <div>
+            <td>
                <%= link_to "destroy", book_post_comment_path(post_comment.book, post_comment), method: :delete, class: "btn btn-danger pull-right" %>
-            </div>
+            </td>
             <% end %>
                </div>
             <% end %>
+              </tr>
+            </tbody>
+        </table>
 
 　　　<!--コメント機能-->
 
