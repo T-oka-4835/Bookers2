@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     @books = Book.all
     @book = Book.new
     @user = current_user
+    @post_comment = PostComment.new
   end
 
   def show

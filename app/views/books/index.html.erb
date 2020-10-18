@@ -46,6 +46,15 @@
         </td>
         <% end %>
         <!--いいね機能-->
+
+        <!--コメント数-->
+
+          <div class="comment-list bt style-2" id="comments">
+          <div class="float-wrapper">
+          <td class="comment-count">コメント数:<%= @book.post_comments.count %></td>
+          </div>
+
+        <!--コメント数-->
          </tr>
         <% end %>
 
