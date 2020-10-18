@@ -26,6 +26,11 @@
           <% end %>
         <td><%= link_to book.title, book_path(book) %></td>
         <td><%= book.body %></td>
+
+        <div class="comment-list bt style-2" id="comments">
+          <div class="float-wrapper">
+          <td class="comment-count">コメント数:<%= book.post_comments.count %></td>
+          </div>
      <% end %>
      </tr>
     </tbody>

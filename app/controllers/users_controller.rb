@@ -6,6 +6,8 @@ before_action :authenticate_user!
     @user = current_user
     @book = Book.new
     @books = @user.books
+    # @book_all = Book.all
+    # @book_date = Book.find(params[:id])
   end
 
   def index
