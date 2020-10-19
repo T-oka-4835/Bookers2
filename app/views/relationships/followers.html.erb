@@ -6,13 +6,18 @@
       <th>name</th>
     </tr>
   </thead>
+
   <tbody>
-    <% @users.each do |user| %>
+    <% if @users.exists? %>
+     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to (user) do %>
-          <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", class: "no-image" %></td>
-          <% end %>
+         <td><%= link_to (user) do %>
+        <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", class: "no-image" %></td>
+        <% end %>
         <td><%= link_to user.name %></td>
-    <% end %>    
+        <% end %>
+    <% else %>
+        <p>ユーザーはいません</p>
+    <% end %>
   </tbody>
 </table>

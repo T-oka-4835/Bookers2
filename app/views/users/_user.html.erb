@@ -23,11 +23,11 @@
     <!--フォロー機能-->
     <tr>
     <td>follows:</td>
-    <td><%= link_to "#{user.followings.count}" %></td>
+    <td><%= link_to "#{user.followings.count}", user_followings_path(user.id) %></td>
     </tr>
     <tr>
     <td>followers:</td>
-    <td><%= link_to "#{user.followers.count}" %></td>
+    <td><%= link_to "#{user.followers.count}",  user_followers_path(user.id) %></td>
     </tr>
     <!--フォロー機能-->
   </tbody>
