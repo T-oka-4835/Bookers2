@@ -6,7 +6,6 @@ before_action :authenticate_user!
     @user = current_user
     @book = Book.new
     @books = @user.books
-    @users = User.find(params[:id])
   end
 
   def index
@@ -30,6 +29,16 @@ before_action :authenticate_user!
     else
       render :edit
     end
+  end
+
+   def follow
+    current_user.follow(params[:id])
+    redirect_to root_path
+   end
+
+  def unfollow
+    current_user.unfollow(params[:id])
+    redirect_to root_path
   end
 
 private
