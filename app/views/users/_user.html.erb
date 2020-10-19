@@ -19,6 +19,17 @@
       <th>introduction</th>
       <th><%= user.introduction %></th>
     </tr>
+
+    <!--フォロー機能-->
+    <tr>
+    <td>follows:</td>
+    <td><%= "#{@user.follower.count}" %></td>
+    </tr>
+    <tr>
+    <td>followers:</td>
+    <td><%= "#{@user.followed.count}" %></td>
+    </tr>
+    <!--フォロー機能-->
   </tbody>
 </table>
 
