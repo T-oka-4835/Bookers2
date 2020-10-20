@@ -10,7 +10,7 @@ class SearchsController < ApplicationController
        @users = @dates
        @book = Book.new
        @user = current_user
-       redirect_to users_path
+       render "users/index"
     end
   end
   # 検索機能
