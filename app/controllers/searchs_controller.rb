@@ -12,6 +12,14 @@ class SearchsController < ApplicationController
        @user = current_user
        render "users/index"
     end
+
+    if @model == "book"
+       @books = @dates
+       @book = Book.new
+       @user = current_user
+       render "books/index"
+    end
+
   end
   # 検索機能
 
