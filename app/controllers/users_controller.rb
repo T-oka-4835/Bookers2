@@ -40,7 +40,7 @@ before_action :authenticate_user!
     current_user.unfollow(params[:id])
     redirect_to root_path
   end
-
+  
 private
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
