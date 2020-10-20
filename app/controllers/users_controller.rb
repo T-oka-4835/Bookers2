@@ -13,8 +13,6 @@ before_action :authenticate_user!
     @user = current_user
     # 他のユーザー
     @users = User.all
-    # 検索機能
-    @users = @users.where('name Like ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def edit
