@@ -13,6 +13,8 @@ before_action :authenticate_user!
     @user = current_user
     # 他のユーザー
     @users = User.all
+    # 検索機能
+    @users = @users.where('name Like ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def edit
@@ -40,7 +42,7 @@ before_action :authenticate_user!
     current_user.unfollow(params[:id])
     redirect_to root_path
   end
-  
+
 private
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
