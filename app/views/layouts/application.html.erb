@@ -66,11 +66,24 @@
     </p>
 
     <!--検索機能-->
-    <div class="search">
-    <%= form_with url: users_path, method: :get, local: true do |form| %>
-      <%= form.text_field :search %>
-      <%= form.submit '検索', name: nil %>
+    <!--追加１-->
+    <% if user_signed_in? %>
+       <div class="search-form">
+
+        <div class="search">
+          <%= form_with url: users_path, method: :get, local: true do |form| %>
+            <!--<= form.text_field :search %>-->
+
+            <!--追加１-->
+            <%= text_field_tag 'search[content]'%>
+            <%= select_tag 'search[model]',options_for_select({"User"=>"user", "Book" =>"book"})%>
+            <%= select_tag 'search[how]', options_for_select(["完全一致"=>"match", "前方一致"=>"forward", "後方一致"=>"backward", "部分一致"=>"partical" ])%>
+
+            <%= form.submit '検索', name: nil %>
+      <% end %>
     <% end %>
+    <!--追加１-->
+    </div>
     </div>
     <!--検索機能-->
     <%= yield %>
