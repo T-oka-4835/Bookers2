@@ -24,25 +24,28 @@
     </tr>
     <% end %>
 
-<%= render partial: "favorites/favorites", locals: {book: @book} %>
+ <!--いいね機能部分テンプレート-->
+    <td id='favorite_btn<%= @book.id %>'>
+    <%= render partial: "favorites/favorite_btn", locals: {book: @book} %>
+    </td>
+<!--いいね機能部分テンプレート-->
 
-
-    <!--いいね機能-->
-     <!--<% if @book.favorited_by?(current_user) %>-->
+    <!--いいね機能予備-->
+     <!--< if @book.favorited_by?(current_user) %>-->
      <!--   <td>-->
-     <!--     <%= link_to book_favorites_path(@book), method: :delete do %>-->
+     <!--     <= link_to book_favorites_path(@book), method: :delete do %>-->
      <!--     <i class="fa fa-heart" aria-hiddent="true" style="color: red;"></i>-->
-     <!--     <%= @book.favorites.count %>-->
-     <!--     <% end %>-->
+     <!--     <= @book.favorites.count %>-->
+     <!--     < end %>-->
      <!--   </td>-->
-     <!--   <% else %>-->
+     <!--   < else %>-->
      <!--   <td>-->
-     <!--     <%= link_to book_favorites_path(@book), method: :book do %>-->
+     <!--     <= link_to book_favorites_path(@book), method: :book do %>-->
      <!--     <i class="fa fa-heart-o" aria-hidden="true" tyle="color: red;"></i>-->
-     <!--     <%= @book.favorites.count %>-->
-     <!--     <% end %>-->
+     <!--     <= @book.favorites.count %>-->
+     <!--     < end %>-->
      <!--   </td>-->
-     <!--   <% end %>-->
+     <!--   < end %>-->
       <!--いいね機能-->
 
       <!--コメント機能-->
