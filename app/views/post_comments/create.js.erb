@@ -1,0 +1,2 @@
+$('#comment_btn<%= @book.id %>').html("<%= j(render "post_comments/table", book: @book) %>");
+$("textarea").val('')
