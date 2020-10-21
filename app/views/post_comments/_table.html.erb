@@ -13,8 +13,8 @@
                  <td class="comment-entry"><%= post_comment.comment %></td>
             <% if post_comment.user == current_user %>
 
-            <td　>
-               <%= link_to "destroy", book_post_comment_path(post_comment.book, post_comment), method: :delete, class: "btn btn-danger pull-right" %>
+            <td>
+               <%= link_to "destroy", book_post_comment_path(post_comment.book, post_comment), method: :delete, class: "btn btn-danger pull-right", remote: true %>
             </td>
 
             <% end %>
