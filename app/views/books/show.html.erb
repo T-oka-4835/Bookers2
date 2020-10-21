@@ -27,14 +27,14 @@
     <!--いいね機能-->
      <% if @book.favorited_by?(current_user) %>
         <td>
-          <%= link_to book_favorites_path(@book), method: :delete do %>
+          <%= link_to book_favorites_path(@book), method: :delete, remote: true do %>
           <i class="fa fa-heart" aria-hiddent="true" style="color: red;"></i>
           <%= @book.favorites.count %>
           <% end %>
         </td>
         <% else %>
         <td>
-          <%= link_to book_favorites_path(@book), method: :book do %>
+          <%= link_to book_favorites_path(@book), method: :book, remote: true do %>
           <i class="fa fa-heart-o" aria-hidden="true" tyle="color: red;"></i>
           <%= @book.favorites.count %>
           <% end %>
@@ -79,10 +79,6 @@
         </table>
 
 　　　<!--コメント機能-->
-
-
-
-
     <%= form_with(model:[@book, @post_comment], local: true) do |f| %>
       <div class="row">
         <div class="col-sm-12">
