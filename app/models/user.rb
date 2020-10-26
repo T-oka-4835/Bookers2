@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :books, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :post_comments, dependent: :destroy
+  has_many :user_rooms
+  has_many :chats
 
   validates :name, presence: true, length: {minimum: 2, maximum: 20}
   validates :introduction, length: {maximum: 50}
